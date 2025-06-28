@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>753</width>
+    <height>522</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Genel Arka Plan ve Yazı Rengi */
+QWidget {
+    background-color: #121212;
+    color: #E0E0E0;
+}
+
+/* QPushButton - Belirgin Buton + Gölgelendirme */
+QPushButton {
+    background-color: #00AEEF;
+    font: bold 14pt &quot;Segoe UI&quot;;
+    color: white;
+    font-weight: bold; /* Yazı kalın */
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    box-shadow: 0px 4px 10px rgba(0, 174, 239, 0.6); /* Daha belirgin gölge */
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: #D32F2F;
+    box-shadow: 0px 4px 10px rgba(211, 47, 47, 0.7); /* Hover gölgesi */
+}
+
+QPushButton:pressed {
+    background-color: #B71C1C;
+    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.4); /* Basılı efekti */
+}
+
+
+/* QLineEdit - Belirginlik İçin */
+QLineEdit {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+/* QComboBox */
+QComboBox {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+    background-color: #2A2A2A;
+    border-left: 1px solid #555;
+}
+
+QComboBox::down-arrow {
+    width: 10px;
+    height: 10px;
+    image: none; /* Kendi ikonunu kullanacaksan url() ekle */
+}
+
+/* Açılır liste görünümü */
+QComboBox QAbstractItemView {
+    background-color: #2A2A2A;
+    color: #E0E0E0;
+    selection-background-color: #455A64;
+    selection-color: white;
+    border: 1px solid #444;
+}
+
+/* Tablo Başlıkları */
+QHeaderView::section {
+    background-color: #E0E0E0;
+    color: black;
+    font-weight: bold;
+    padding: 6px;
+    border: none;
+}
+
+/* QTableView */
+QTableView {
+    background-color: #1E1E1E;
+    alternate-background-color: #2A2A2A;
+    gridline-color: #444;
+    color: #E0E0E0;
+    selection-background-color: #455A64;
+    selection-color: white;
+    border: 1px solid #333;
+}
+
+QTableView::item {
+    padding: 4px;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string>CRM Admin Menu</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="pushButton_mailgonder">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <italic>false</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Send Mail</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_etkinlikkontrolu">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <italic>false</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Activity Control</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_tercihler">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <italic>false</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Preference Admin Menu</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_exit">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Segoe UI</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <italic>false</italic>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Exit</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QTableWidget" name="tableWidget_show"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>753</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

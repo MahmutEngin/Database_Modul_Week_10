@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>801</width>
+    <height>487</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Genel Arka Plan ve Yazı Rengi */
+QWidget {
+    background-color: #121212;
+    color: #E0E0E0;
+}
+
+/* QPushButton - Belirgin Buton + Gölgelendirme */
+QPushButton {
+    background-color: #00AEEF;
+    font: bold 14pt &quot;Segoe UI&quot;;
+    color: white;
+    font-weight: bold; /* Yazı kalın */
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    box-shadow: 0px 4px 10px rgba(0, 174, 239, 0.6); /* Daha belirgin gölge */
+    transition: background-color 0.3s ease;
+}
+
+QPushButton:hover {
+    background-color: #D32F2F;
+    box-shadow: 0px 4px 10px rgba(211, 47, 47, 0.7); /* Hover gölgesi */
+}
+
+QPushButton:pressed {
+    background-color: #B71C1C;
+    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.4); /* Basılı efekti */
+}
+
+
+/* QLineEdit - Belirginlik İçin */
+QLineEdit {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+/* QComboBox */
+QComboBox {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+    background-color: #2A2A2A;
+    border-left: 1px solid #555;
+}
+
+QComboBox::down-arrow {
+    width: 10px;
+    height: 10px;
+    image: none; /* Kendi ikonunu kullanacaksan url() ekle */
+}
+
+/* Açılır liste görünümü */
+QComboBox QAbstractItemView {
+    background-color: #2A2A2A;
+    color: #E0E0E0;
+    selection-background-color: #455A64;
+    selection-color: white;
+    border: 1px solid #444;
+}
+
+/* Tablo Başlıkları */
+QHeaderView::section {
+    background-color: #E0E0E0;
+    color: black;
+    font-weight: bold;
+    padding: 6px;
+    border: none;
+}
+
+/* QTableView */
+QTableView {
+    background-color: #1E1E1E;
+    alternate-background-color: #2A2A2A;
+    gridline-color: #444;
+    color: #E0E0E0;
+    selection-background-color: #455A64;
+    selection-color: white;
+    border: 1px solid #333;
+}
+
+QTableView::item {
+    padding: 4px;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_5">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_4" columnstretch="15,85">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>CRM Mentor Menu</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QSplitter" name="splitter">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <layout class="QGridLayout" name="gridLayout_3" columnstretch="40,60">
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboBox_cokluSekme">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="maxVisibleItems">
+             <number>12</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>Make your choice</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VIT Projesinin Tamamına Katılması Uygun Olur</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VIT Projesi ilk IT Eğitimi Alarak Yönlendirilmesi Uygun Olur</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VIT Projesi İngilizce Eğitimine Yönlendirilmesi Uygun Olur</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>VIT Projesi Kapsamında Direkt İşe Yönlendirilmesi Uygun Olur</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Direkt Bireysel Koçluk ile İşe Yönlendirilmesi Uygun Olur</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bir Sonraki VIT Projesine Katılması Daha Uygun Olur</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Başka Bir Sektöre Yönlendirilmeli</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Diğer</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>148</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <layout class="QGridLayout" name="gridLayout_2" columnstretch="15,85">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="1" column="0">
+           <widget class="QPushButton" name="pushButton_ara">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Search</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLineEdit" name="lineEdit_ara">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>9</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="placeholderText">
+             <string>Name or Surname</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="pushButton_tumGorusmeler">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>All Applications</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QPushButton" name="pushButton_exit">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Exit</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QPushButton" name="pushButton_tercihler">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Segoe UI</family>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Back Menu</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="1">
+       <widget class="QTableWidget" name="tableWidget_mentor"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>801</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
